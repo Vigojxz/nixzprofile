@@ -1,0 +1,95 @@
+/* Import font dari Google */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000; /* fallback jika background blur gagal */
+}
+
+/* Background blur */
+.background {
+    background: url('background.jpg') no-repeat center center/cover;
+    filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* GANTI 'background.jpg' DENGAN FOTO BACKGROUND KAMU */
+
+/* Kartu utama */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Foto profil */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* Nama */
+.name {
+    margin: 10px 0 5px;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Deskripsi */
+.description {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Link tombol */
+.link {
+    display: block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.link i {
+    margin-right: 10px;
+}
+
+.link:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .name {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 13px;
+    }
+    .link {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
